@@ -61,7 +61,17 @@ It's also possible to see a list of all Users and search for other users by any 
 | /users/:id     | GET    | Return a User    |
 | /users         | POST   | Create a User    |
 | /users/:id     | PATCH  | Update a User    |
-| /users/:id     | DELETE | Destroy a User   |
+| /users/:id     | DELETE | Delete a User    |
+
+Prefix Verb URI Pattern Controller#Action
+users GET /users users#index
+POST /users users#create
+new_user GET /users/new users#new
+edit_user GET /users/:id/edit users#edit
+user GET /users/:id users#show
+PATCH /users/:id users#update
+PUT /users/:id users#update
+DELETE /users/:id
 
 <!-- GETTING STARTED -->
 
