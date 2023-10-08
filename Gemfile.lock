@@ -129,6 +129,7 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
+    phonelib (0.8.4)
     psych (5.1.0)
       stringio
     public_suffix (5.0.3)
@@ -179,8 +180,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    simpleidn (0.2.1)
-      unf (~> 0.1.4)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -194,17 +193,12 @@ GEM
     stringio (3.0.8)
     thor (1.2.2)
     timeout (0.4.0)
-    truemail (3.0.9)
-      simpleidn (~> 0.2.1)
     turbo-rails (1.4.0)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
       railties (>= 6.0.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
-    unf (0.1.4)
-      unf_ext
-    unf_ext (0.0.8.2)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -228,6 +222,7 @@ DEPENDENCIES
   debug
   importmap-rails
   jbuilder
+  phonelib
   puma (~> 5.0)
   rails (~> 7.0.8)
   redis (~> 4.0)
@@ -235,7 +230,6 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
-  truemail
   turbo-rails
   tzinfo-data
   web-console
