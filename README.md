@@ -44,6 +44,7 @@ It's also possible to see a list of all Users and search for other users by any 
 - The model should validate the email, name, phone, and CPF format before saving and display an error message if it's invalid;
 - The index page should be able to search for data by any of the fields;
 - The data should be organized in the view;
+- A valid phone
 
 ### :card_file_box:Database Schema
 
@@ -149,3 +150,13 @@ Below are the instructions for the installation, configuration, and use of the a
         </td>
     </tr>
 </table>
+
+## TODO'S
+
+-[x] Utilizar a gem cpf para a validação de cpf https://github.com/fnando/cpf_cnpj;
+-[] TODO: o email 'teste1@email' está passando como válido no update
+-[] Método customizado com regex para validar phone;
+
+-[] Criar seeds com faker;
+-[] TDD front-end com Capybara;
+-[] TDD model e routes com Minitest;
