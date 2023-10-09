@@ -72,3 +72,4 @@ end
 
 gem "cpf_cnpj"
 gem 'phonelib'
+gem 'faker'
