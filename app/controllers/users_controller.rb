@@ -13,6 +13,7 @@ class UsersController < ApplicationController
       SQL
       @users = @users.where(sql_subquery, query: "%#{params[:query]}%")
     end
+    @pagy, @users = pagy(@users) # Pagination with pagy gem
   end
 
   # GET /users/1 or /users/1.json

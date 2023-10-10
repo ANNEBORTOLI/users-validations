@@ -33,3 +33,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# github token
+# 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

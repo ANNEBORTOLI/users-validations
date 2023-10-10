@@ -22,7 +22,7 @@ This is an application build with TDD using Ruby on Rails, using the Bootstrap s
 
 The main objetive of this application is to apply validations to the filled fields and display the filling errors in their respective fields.
 
-It's also possible to see a list of all Users and search for other users by any attribute.
+It's also possible to see a list of all Users sorted alphabetically, and search for other users by any attribute (name, email, phone number or cpf).
 
 ### 🛠️Technologies
 
@@ -33,7 +33,6 @@ It's also possible to see a list of all Users and search for other users by any 
   <li>HTML5</li>
   <li>CSS3</li>
   <li>Bootstrap</li>
-  <li>Stimulus</li>
   <li>Regex</li>
   <li>Minitest</li>
 </ul>
@@ -42,9 +41,9 @@ It's also possible to see a list of all Users and search for other users by any 
 
 - Everyone can add a new User to the list (unauthenticated);
 - The model should validate the email, name, phone, and CPF format before saving and display an error message if it's invalid;
-- The index page should be able to search for data by any of the fields;
-- The data should be organized in the view;
-- A valid phone
+- The index page should be able to search for data by any of the fields in the users table;
+- The data should be organized alphabetically in the view;
+- A valid phone number format includes: ...
 
 ### :card_file_box:Database Schema
 
@@ -106,21 +105,8 @@ Below are the instructions for the installation, configuration, and use of the a
 
 ## :camera_flash:Usage Examples
 
-- Users List:
 <div align="center">
-  <img src="public/create-user.png">
-</div>
-<br>
-
-- Searching for User:
-<div align="center">
-  <img src="public/create-user.png">
-</div>
-<br>
-
-- Creating new User:
-<div align="center">
-  <img src="public/create-user.png">
+  <img src="public/index.png">
 </div>
 <br>
 
@@ -144,7 +130,7 @@ Below are the instructions for the installation, configuration, and use of the a
 -[] Criar métodos no user model para validar formato de cpf e telefone before_save.
 
 -[] Melhorar o style da Navbar (box-shadow);
--[] Adicionar paginaçao (mostrar apenas 10 User por página);
+-[] Adicionar paginaçao (mostrar apenas 10 User por página) com gem PAGY;
 -[] Criar footer? Arrumar.
 
 -[] TDD front-end com Capybara;
