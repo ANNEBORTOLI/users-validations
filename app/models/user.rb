@@ -11,7 +11,7 @@ class User < ApplicationRecord
   private
 
   def validate_cpf_format
-    errors.add(:cpf, 'is not a valid CPF') unless CPF.valid?(cpf, strict: true)
+    errors.add(:cpf, 'is not a valid') unless CPF.valid?(cpf, strict: true)
   end
 
   def phone_format

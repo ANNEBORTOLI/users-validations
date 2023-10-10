@@ -64,16 +64,6 @@ It's also possible to see a list of all Users and search for other users by any 
 | /users/:id     | PATCH  | Update a User    |
 | /users/:id     | DELETE | Delete a User    |
 
-Prefix Verb URI Pattern Controller#Action
-users GET /users users#index
-POST /users users#create
-new_user GET /users/new users#new
-edit_user GET /users/:id/edit users#edit
-user GET /users/:id users#show
-PATCH /users/:id users#update
-PUT /users/:id users#update
-DELETE /users/:id
-
 <!-- GETTING STARTED -->
 
 ## :book:General instructions
@@ -154,9 +144,9 @@ Below are the instructions for the installation, configuration, and use of the a
 ## TODO'S
 
 -[x] Utilizar a gem cpf para a validação de cpf https://github.com/fnando/cpf_cnpj;
--[] TODO: o email 'teste1@email' está passando como válido no update
 -[] Método customizado com regex para validar phone;
 
--[] Criar seeds com faker;
+-[x] Criar seeds com faker;
+
 -[] TDD front-end com Capybara;
 -[] TDD model e routes com Minitest;
