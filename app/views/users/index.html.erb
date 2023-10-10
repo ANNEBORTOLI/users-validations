@@ -16,7 +16,7 @@
   <tbody>
   <% @users.each_with_index do |user, i| %>
     <tr>
-      <th scope="row" ><%= i + 1 %></th>
+      <th scope="row" ><%= i + ((@page - 1) * 10) + 1 %></th>
       <td><%= link_to user.name, user_path(user), class: 'user-link' %></td>
       <td><%= link_to user.email, user_path(user), class: 'user-link' %></td>
       <td><%= link_to user.phone, user_path(user), class: 'user-link' %></td>

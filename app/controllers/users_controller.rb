@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.all.order(:name) # Order users by name in ascending order
+    @page = params[:page].present? ? params[:page].to_i : 1
     if params[:query].present?
       sql_subquery = <<~SQL
         users.name LIKE :query
