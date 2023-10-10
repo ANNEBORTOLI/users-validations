@@ -6,7 +6,7 @@ User.destroy_all
 puts "🌱 Seeding..."
 puts "👩‍👩‍👦‍👦 Creating users..."
 
-10.times do |n|
+40.times do |n|
   User.create!(
     name: "#{Faker::Name.name}-#{n}",
     email: "#{Faker::Internet.email}",
