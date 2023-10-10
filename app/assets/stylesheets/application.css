@@ -1,5 +1,6 @@
 @import url("components/navbar.css");
 @import url("components/searchbar.css");
+@import url("components/footer.css");
 
 * {
   margin: 0;
@@ -38,4 +39,9 @@ a.user-link:hover {
   padding: 0;
   border: none;
   background: none;
+}
+
+.fa-solid,
+.fa-trash-can {
+  color: #752b2b;
 }

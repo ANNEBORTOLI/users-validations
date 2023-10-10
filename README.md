@@ -75,7 +75,7 @@ Below are the instructions for the installation, configuration, and use of the a
 1. Clone the repo
 
 ```sh
-   git clone https://github.com/ANNEBORTOLI/users-validations
+   git clone https://github.com/ANNEBORTOLI/users-validations.git
    cd users-validations
 ```
 
@@ -141,12 +141,11 @@ Below are the instructions for the installation, configuration, and use of the a
     </tr>
 </table>
 
-## TODO'S
+-[] Criar métodos no user model para validar formato de cpf e telefone before_save.
 
--[x] Utilizar a gem cpf para a validação de cpf https://github.com/fnando/cpf_cnpj;
--[] Método customizado com regex para validar phone;
-
--[x] Criar seeds com faker;
+-[] Melhorar o style da Navbar (box-shadow);
+-[] Adicionar paginaçao (mostrar apenas 10 User por página);
+-[] Criar footer? Arrumar.
 
 -[] TDD front-end com Capybara;
 -[] TDD model e routes com Minitest;
