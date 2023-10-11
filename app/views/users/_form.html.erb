@@ -1,40 +1,47 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <%= form_with(model: user, class: "needs-validation", novalidate: true) do |form| %>
+      <%= form_with(model: user, html: { data: { controller: "masks" } },  class: "needs-validation", novalidate: true) do |form| %>
+        <%# Display ERROS %>
         <% if user.errors.any? %>
           <div class="alert alert-danger">
-            <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+            <h5>User can't be saved</h5>
             <ul>
-              <% user.errors.each do |error| %>
-                <li><%= error.full_message %></li>
+              <% user.errors.messages.each do |field, messages| %>
+                <li><%= "#{field} " "#{messages.first}"%></li>
               <% end %>
             </ul>
           </div>
         <% end %>
 
+        <%# NAME %>
         <div class="mb-3">
           <%= form.label :name, class: "form-label" %>
-          <%= form.text_field :name, class: "form-control", placeholder: "Enter your name", required: true %>
+          <%= form.text_field :name, class: "form-control" %>
+          <% errors_for(form, :name) %>
         </div>
-
+        <%# EMAIL %>
         <div class="mb-3">
           <%= form.label :email, class: "form-label" %>
-          <%= form.text_field :email, class: "form-control", placeholder: "Enter your email", required: true %>
+          <%= form.text_field :email, class: "form-control" %>
+          <% errors_for(form, :email) %>
         </div>
-
+        <%# PHONE %>
         <div class="mb-3">
           <%= form.label :phone, class: "form-label" %>
-          <%= form.text_field :phone, class: "form-control", placeholder: "+55 (00) 00000-0000" %>
+          <%= form.text_field :phone, class: "form-control", data: { masks_target: 'phone' } %>
+          <% errors_for(form, :phone) %>
         </div>
-
+        <%# CPF %>
         <div class="mb-3">
           <%= form.label :cpf, class: "form-label" %>
-          <%= form.text_field :cpf, class: "form-control", placeholder: "000.000.000-00" %>
+          <%= form.text_field :cpf, class: "form-control", data: { masks_target: 'cpf' } %>
+          <% errors_for(form, :cpf) %>
         </div>
-
+        <%# BOTAO %>
         <div class="mb-3">
-          <%= form.submit "Submit", class: "btn btn-primary" %>
+          <%= form.submit "Save", class: "btn btn-success" %> |
+          <%= link_to "Back", users_path %>
         </div>
       <% end %>
     </div>

@@ -24,11 +24,10 @@
         </div>
 
         <div>
-          <%= link_to "Update", edit_user_path(@user), class: "btn btn-primary" %>
+          <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-success" %> |
+          <%= link_to "Back", users_path %>
         </div>
       <% end %>
-      <br>
-      <div><%= link_to "Back", users_path %></div>
     </div>
   </div>
 </div>

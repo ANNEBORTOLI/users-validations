@@ -75,3 +75,5 @@ gem 'phonelib'
 gem 'faker'
 
 gem "pagy", "~> 6.1"
+
+gem 'pry-byebug'
