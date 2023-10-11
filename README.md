@@ -105,8 +105,21 @@ Below are the instructions for the installation, configuration, and use of the a
 
 ## :camera_flash:Usage Examples
 
+- Users List
 <div align="center">
   <img src="public/index.png">
+</div>
+<br>
+
+- User Profile
+<div align="center">
+  <img src="public/user-profile.png">
+</div>
+<br>
+
+- New User Validations
+<div align="center">
+  <img src="public/new-user.png">
 </div>
 <br>
 
@@ -126,7 +139,3 @@ Below are the instructions for the installation, configuration, and use of the a
         </td>
     </tr>
 </table>
-
--[] Criar métodos no user model elefone before_save.
--[] TDD front-end com Capybara;
--[] TDD model e routes com Minitest;
