@@ -1,4 +1,4 @@
-# Festalab Demo - User validations
+# Users validations
 
 <!-- TABLE OF CONTENTS -->
 
@@ -18,7 +18,7 @@
 
 ## :notebook_with_decorative_cover:About the project
 
-This is an application build with TDD using Ruby on Rails, using the Bootstrap styling library and the JavaScript framework Stimulus.
+This is an application build using Ruby on Rails, using the Bootstrap styling library and the JavaScript framework Stimulus.
 
 The main objetive of this application is to apply validations to the filled fields and display the filling errors in their respective fields.
 
@@ -127,6 +127,6 @@ Below are the instructions for the installation, configuration, and use of the a
     </tr>
 </table>
 
--[] Criar métodos no user model para validar formato de cpf e telefone before_save.
+-[] Criar métodos no user model elefone before_save.
 -[] TDD front-end com Capybara;
 -[] TDD model e routes com Minitest;
