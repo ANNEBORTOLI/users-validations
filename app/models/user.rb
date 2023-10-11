@@ -4,17 +4,24 @@ class User < ApplicationRecord
   validates :cpf, uniqueness: true
   validates :phone, phone: { possible: true, allow_blank: false }, uniqueness: false
   validates :email, uniqueness: true, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }
-
-  validate :validate_cpf_format
-  before_save :phone_format
+  validate :valid_cpf?
+  before_save :phone_formatter, :email_formatter, :cpf_formatter
 
   private
 
-  def validate_cpf_format
+  def valid_cpf?
     errors.add(:cpf, 'is not a valid') unless CPF.valid?(cpf, strict: true)
   end
 
-  def phone_format
+  def phone_formatter
     self.phone = Phonelib.parse(phone).e164
+  end
+
+  def email_formatter
+    self.email.downcase!
+  end
+
+  def cpf_formatter
+    self.cpf = CPF.new(cpf).formatted
   end
 end
