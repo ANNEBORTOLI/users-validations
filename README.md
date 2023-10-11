@@ -128,10 +128,5 @@ Below are the instructions for the installation, configuration, and use of the a
 </table>
 
 -[] Criar métodos no user model para validar formato de cpf e telefone before_save.
-
--[] Melhorar o style da Navbar (box-shadow);
--[] Adicionar paginaçao (mostrar apenas 10 User por página) com gem PAGY;
--[] Criar footer? Arrumar.
-
 -[] TDD front-end com Capybara;
 -[] TDD model e routes com Minitest;
