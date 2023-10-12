@@ -138,17 +138,5 @@ Below are the instructions for the installation, configuration, and use of the a
 
 ## :technologist:Developer
 
-<table>
-    <tr align="center">
-        <td>
-            <a href="https://github.com/ANNEBORTOLI" target="_blank">
-              <img src="https://avatars.githubusercontent.com/u/62453211?v=4" height="150px">
-            </a>
-        </td>
-    </tr>
-    <tr align="center">
-        <td>
-        <a href="https://www.linkedin.com/in/anne-bortoli/" target="_blank">Anne Bortoli</a>
-        </td>
-    </tr>
-</table>
+- [Github](https://github.com/ANNEBORTOLI)
+- [Linkedin](https://www.linkedin.com/in/anne-bortoli/)
