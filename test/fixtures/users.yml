@@ -4,10 +4,10 @@ one:
   name: Jane Doe
   email: jane@example.com
   phone: (11) 12345-6789
-  cpf: 32981276719
+  cpf: 329.812.767-19
 
 two:
   name: John Doe
   email: john@example.com
   phone: (79) 12345-6789
-  cpf: 60853502609
+  cpf: 608.535.026-09

@@ -22,19 +22,18 @@ class User < ApplicationRecord
 
   def phone_formatter
     phone_unformat = phone.gsub(/[^0-9,.]/, "")
-    if phone_unformat.length == 14
+    if phone_unformat.length == 11
       self.phone = format_cel_phone(phone_unformat)
-    elsif phone_unformat.length == 13
+    elsif phone_unformat.length == 10
       self.phone = format_landline_phone(phone_unformat)
     end
   end
 
   def format_cel_phone(phone)
-    "#{phone[0..2]} (#{phone[3..4]}) #{phone[5..9]}-#{phone[10..13]}"
+    "(#{phone[0..1]}) #{phone[2..6]}-#{phone[7..10]}"
   end
 
   def format_landline_phone(phone)
-    "#{phone[0..2]} (#{phone[3..4]}) #{phone[5..8]}-#{phone[9..12]}"
+    "(#{phone[0..1]}) #{phone[2..5]}-#{phone[6..9]}"
   end
-
 end

@@ -113,7 +113,13 @@ Below are the instructions for the installation, configuration, and use of the a
 5. Run tests
 
 ```sh
+  # Run test for Model
+  bin/rails test -b test/models/user_test.rb
+```
 
+```sh
+  # Run test for Controller
+  bin/rails test -b test/controllers/users_controller_test.rb
 ```
 
 ## :camera_flash:Usage Examples
