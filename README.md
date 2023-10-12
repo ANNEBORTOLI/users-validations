@@ -139,3 +139,10 @@ Below are the instructions for the installation, configuration, and use of the a
         </td>
     </tr>
 </table>
+
+validação tel BR
+pesquisa com keyup
+validação dos campos telefone e CPF enquanto digita
+manter o valor do campo de pesquisa ao mostrar o resultado
+Teste backend
+Teste frontend

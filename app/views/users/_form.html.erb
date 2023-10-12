@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-6">
-      <%= form_with(model: user, html: { data: { controller: "masks" } },  class: "needs-validation", novalidate: true) do |form| %>
+      <%= form_with(model: user, class: "needs-validation", novalidate: true) do |form| %>
         <%# Display ERROS %>
         <% if user.errors.any? %>
           <div class="alert alert-danger">
@@ -18,25 +18,21 @@
         <div class="mb-3">
           <%= form.label :name, class: "form-label" %>
           <%= form.text_field :name, class: "form-control" %>
-          <% errors_for(form, :name) %>
         </div>
         <%# EMAIL %>
         <div class="mb-3">
           <%= form.label :email, class: "form-label" %>
           <%= form.text_field :email, class: "form-control" %>
-          <% errors_for(form, :email) %>
         </div>
         <%# PHONE %>
         <div class="mb-3">
           <%= form.label :phone, class: "form-label" %>
           <%= form.text_field :phone, class: "form-control", data: { masks_target: 'phone' } %>
-          <% errors_for(form, :phone) %>
         </div>
         <%# CPF %>
         <div class="mb-3">
           <%= form.label :cpf, class: "form-label" %>
           <%= form.text_field :cpf, class: "form-control", data: { masks_target: 'cpf' } %>
-          <% errors_for(form, :cpf) %>
         </div>
         <%# BOTAO %>
         <div class="mb-3">
