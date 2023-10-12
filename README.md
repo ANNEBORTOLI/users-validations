@@ -18,11 +18,13 @@
 
 ## :notebook_with_decorative_cover:About the project
 
-This is an application build using Ruby on Rails, using the Bootstrap styling library and the JavaScript framework Stimulus.
+This is an application build using Ruby on Rails, using the Bootstrap.
 
-The main objetive of this application is to apply validations to the filled fields and display the filling errors in their respective fields.
+The main objetive of this application is to apply validations to the fields while creating and editing new users. Therefore, this application doesn't use authentication.
 
-It's also possible to see a list of all Users sorted alphabetically, and search for other users by any attribute (name, email, phone number or cpf).
+If you want to add sign in/login functionalites you can use a flexible authentication solution for Rails with gem Devise(https://rubygems.org/gems/devise/versions/4.2.0?locale=en).
+
+It's possible to see a list of all Users sorted alphabetically, and search for other users by any attribute (name, email, phone number or cpf). You cant also add, edit, create and delete users.
 
 ### 🛠️Technologies
 
@@ -39,11 +41,22 @@ It's also possible to see a list of all Users sorted alphabetically, and search 
 
 ### 📑Business rules
 
-- Everyone can add a new User to the list (unauthenticated);
-- The model should validate the email, name, phone, and CPF format before saving and display an error message if it's invalid;
-- The index page should be able to search for data by any of the fields in the users table;
-- The data should be organized alphabetically in the view;
-- A valid phone number format includes: ...
+- Everyone can see the users list;
+- Everyone can search for users by any of the fields in the users table;
+- The users should be organized alphabetically by name;
+- Everyone can add a new User to the users list;
+- Everyone can edit a user;
+- Everyone can delete a user;
+
+- The User's model should validate the name, email, phone, and CPF format before saving and display an error message if it's invalid;
+
+- To validate the CPF attribute we use the _gem 'cpf_cnpf'`_. A valid CPF includes the following formats:
+
+  `[ 33638551687, 096.040.054-05]`
+
+- A valid phone number format includes the following formats:
+  `BR Cel phones: [(11) 12345-6789, 11 12345-6789, 11 123456789, 11123456789]`
+  `BR Landline phones [(11) 1234-5678, 11 1234-5678, 11 12345678, 1112345678]`
 
 ### :card_file_box:Database Schema
 
@@ -74,7 +87,7 @@ Below are the instructions for the installation, configuration, and use of the a
 1. Clone the repo
 
 ```sh
-   git clone https://github.com/ANNEBORTOLI/users-validations.git
+   git clone git@github.com:ANNEBORTOLI/users-validations.git
    cd users-validations
 ```
 
@@ -90,17 +103,17 @@ Below are the instructions for the installation, configuration, and use of the a
     rails db:create db:migrate db:seed
 ```
 
-4. Run tests
-
-```sh
-    bundle exec rspec
-```
-
-5. Run the Application locally
+4. Run the Application locally
 
 ```sh
     rails s
     Visit https://localhost:3000.com
+```
+
+5. Run tests
+
+```sh
+
 ```
 
 ## :camera_flash:Usage Examples
@@ -117,7 +130,7 @@ Below are the instructions for the installation, configuration, and use of the a
 </div>
 <br>
 
-- New User Validations
+- User Validations
 <div align="center">
   <img src="public/new-user.png">
 </div>
@@ -139,10 +152,3 @@ Below are the instructions for the installation, configuration, and use of the a
         </td>
     </tr>
 </table>
-
-validação tel BR
-pesquisa com keyup
-validação dos campos telefone e CPF enquanto digita
-manter o valor do campo de pesquisa ao mostrar o resultado
-Teste backend
-Teste frontend
