@@ -6,12 +6,21 @@ User.destroy_all
 puts "🌱 Seeding..."
 puts "👩‍👩‍👦‍👦 Creating users..."
 
-40.times do |n|
+20.times do |n|
   User.create!(
     name: "#{Faker::Name.name}-#{n}",
     email: "#{Faker::Internet.email}",
     cpf: "#{CPF.generate(true)}",
-    phone: Phonelib.parse(Faker::PhoneNumber.cell_phone).e164
+    phone: Faker::Base.numerify('(##) ####-####')
+  )
+end
+
+20.times do |n|
+  User.create!(
+    name: "#{Faker::Name.name}-#{n}",
+    email: "#{Faker::Internet.email}",
+    cpf: "#{CPF.generate(true)}",
+    phone: Faker::Base.numerify('(##) #####-####')
   )
 end
 

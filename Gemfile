@@ -71,9 +71,7 @@ group :test do
 end
 
 gem "cpf_cnpj"
-gem 'phonelib'
 gem 'faker'
-
 gem "pagy", "~> 6.1"
 
 gem 'pry-byebug'
