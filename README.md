@@ -49,7 +49,7 @@ It's possible to see a list of all Users sorted alphabetically, and search for o
 - Everyone can delete a user;
 
 - The User's model should validate the name, email, phone, and CPF format before saving and display an error message if it's invalid;
-
+- Pagination was added to the users list with _gem pagy_, only 10 users per page;
 - To validate the CPF attribute we use the _gem 'cpf_cnpf'`_. A valid CPF includes the following formats:
 
   `[ 33638551687, 096.040.054-05]`
