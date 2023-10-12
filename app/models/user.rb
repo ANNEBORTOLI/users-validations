@@ -1,8 +1,8 @@
 class User < ApplicationRecord
   validates :name, length: { minimum: 2 }, presence: true
-  validates :cpf, uniqueness: true, presence: true
-  validates :email, uniqueness: true, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }, presence: true
-  validates :phone, format: { with: /\A(\(?\d{2}\)?\s?)(\d{4,5}\-?\d{4})\z/ }, presence: true, uniqueness: false
+  validates :cpf, presence: true, uniqueness: true
+  validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }, presence: true, uniqueness: true
+  validates :phone, format: { with: /\A(\(?\d{2}\)?\s?)(\d{4,5}\-?\d{4})\z/ }, presence: true
   validate :valid_cpf?
   before_save :email_formatter, :cpf_formatter, :phone_formatter
 
