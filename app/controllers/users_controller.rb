@@ -3,8 +3,9 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all.order("lower(name) ASC") # Order users by name in ascending order
-    @page = params[:page].present? ? params[:page].to_i : 1
+    # Order users by name in ascending order
+    @users = User.all.order("lower(name) ASC")
+
     if params[:query].present?
       sql_subquery = <<~SQL
         users.name LIKE :query
@@ -14,7 +15,11 @@ class UsersController < ApplicationController
       SQL
       @users = @users.where(sql_subquery, query: "%#{params[:query]}%")
     end
-    @pagy, @users = pagy(@users) # Pagination with pagy gem
+
+    # Ensure the page parameter is at least 1
+    @page = params[:page].present? ? params[:page].to_i : 1
+    # Create a Pagy instance with the corrected page number
+    @pagy, @users = pagy(@users)
   end
 
   # GET /users/1 or /users/1.json
@@ -61,6 +66,7 @@ class UsersController < ApplicationController
     @user.destroy
 
     respond_to do |format|
+      # Redirect back to the index page with the preserved page information
       format.html { redirect_to users_url, notice: "User was successfully destroyed." }
       format.json { head :no_content }
     end

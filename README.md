@@ -12,15 +12,15 @@
 - [:book:General instructions](#bookgeneral-instructions)
   - [:electric_plug:Installation](#electric_pluginstallation)
 - [:book:Usage Examples](#bookusage-examples)
-- [:technologist:Developer](#developer)
+- [:technologist:Developer](#technologistdeveloper)
 
 <!-- ABOUT THE PROJECT -->
 
 ## :notebook_with_decorative_cover:About the project
 
-This is an application build using Ruby on Rails, using the Bootstrap.
+This is an application build using Ruby on Rails and Bootstrap.
 
-The main objetive of this application is to apply validations to the fields while creating and editing new users. Therefore, this application doesn't use authentication.
+The main objetive of this application is to apply validations to the users fields while creating and editing new users. Therefore, this application doesn't use authentication.
 
 If you want to add sign in/login functionalites you can use a flexible authentication solution for Rails with gem Devise(https://rubygems.org/gems/devise/versions/4.2.0?locale=en).
 
