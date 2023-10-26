@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  validates :name, length: { minimum: 2 }, presence: true
+  validates :name, length: { minimum: 2 },format: { with: /\A[\w.-]+\z/ }, presence: true
   validates :cpf, presence: true, uniqueness: true
   validates :email, format: { with: /\A[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]+\z/ }, presence: true, uniqueness: true
   # validates :phone, format: { with: /\A(\(?\d{2}\)?\s?)(\d{4,5}\-?\d{4})\z/ }, presence: true
