@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     # Order users by name in ascending order
-    @users = User.all.order("lower(name) ASC")
+    @users = User.all.order("lower(name) ASC")  # Order users by name in ascending order
 
     if params[:query].present?
       sql_subquery = <<~SQL
